@@ -1,0 +1,99 @@
+.navbar {
+  position: absolute;
+  inset: 2rem 2rem auto;
+  z-index: 30;
+  &-brand {
+    display: flex;
+    align-items: stretch;
+    flex-shrink: 0;
+  }
+  &-burger {
+    height: 4rem;
+    width: 4rem;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+  }
+  &-backdrop {
+    display: none;
+  }
+  &-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3rem;
+    clip-path: polygon(4% 0, 100% 0, 100% 100%, 0 100%);
+    transform: translateX(100%);
+    transition: transform 300ms ease;
+    max-width: 40rem;
+    padding: 4rem 5rem;
+    width: 70vw;
+    background-color: $purple;
+    z-index: 40;
+    position: fixed;
+    inset: 0 0 0 auto;
+    overflow-y: scroll;
+    @include mobile {
+      width: 100vw;
+      clip-path: none;
+    }
+    &.is-active {
+      transform: translateX(0%);
+      + .navbar-backdrop {
+        display: block;
+        cursor: pointer;
+        position: fixed;
+        inset: 0;
+      }
+    }
+    &-close {
+      position: absolute;
+      top: 3rem;
+      right: 3rem;
+      cursor: pointer;
+    }
+    .logo {
+      cursor: pointer;
+      display: inline-block;
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      justify-content: space-between;
+      li {
+        font-size: 2.75rem;
+        font-weight: 600;
+        a {
+          color: white;
+          &[aria-current="page"], &:hover {
+            position: relative;
+            z-index: 1;
+            &::after {
+              content: "";
+              position: absolute;
+              background-color: $green;
+              height: 21%;
+              width: 108%;
+              bottom: 15%;
+              left: -2%;
+              z-index: -1;
+              clip-path: $polygon-main;
+            }
+          }
+        }
+      }
+    }
+    .socials {
+      display: flex;
+      flex-direction: row;
+      gap: .5rem;
+      align-items: center;
+    }
+  }
+}

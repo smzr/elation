@@ -1,0 +1,40 @@
+.about-us-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-image: url("/images/bg-smile-purple.svg");
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5rem 0;
+  clip-path: polygon(0 0, 100% 5vh, 100% 100%, 0 100%);
+  margin-top: -5vh;
+  position: relative;
+  .content {
+    background-color: $green;
+    float: right;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    clip-path: polygon(2% 0, 98% 0, 100% 96%, 0 100%);
+    max-width: 48ch;
+    gap: 1rem;
+    h2, p {
+      color: white;
+    }
+    p {
+      font-weight: 500;
+    }
+  }
+  img#karen-outline {
+    position: absolute;
+    bottom: 0;
+    right: 45%;
+    @include touch {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+em.underline {
+  font-style: normal;
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $yellow;
+    height: 21%;
+    width: 108%;
+    bottom: 15%;
+    left: -2%;
+    z-index: -1;
+    clip-path: $polygon-main;
+  }
+
+  /* Variants (Colour) */
+  &-green {
+    &::after {
+      background-color: $green;
+    }
+  }
+}

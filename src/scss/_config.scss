@@ -1,0 +1,98 @@
+/* Colors: */
+$light: #F7F7F7;
+$light-shade: #DDDEE0;
+$yellow: #F2DC5D;
+$purple: #390049;
+$purple-shade: #230B29;
+$green: #0CCE6B;
+
+/* Typography: */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+$font-family: 'Poppins', sans-serif;
+$size-300: 1rem; // 16px 
+$size-400: 1.125rem; // 18px
+$size-500: 1.5rem; // 24px
+$size-600: 2.125rem; // 34px
+$size-700: #{"clamp(2.5rem, 1.8438rem + 2.9167vw, 3.375rem)"}; // 40px -> 54px
+$size-800: #{"clamp(2.75rem, 1.3438rem + 6.25vw, 4.625rem)"}; // 44px -> 74px
+
+/* Misc: */
+$polygon-main: polygon(0 8%, 97% 0, 100% 100%, 0 90%);
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: $purple-shade;
+  font-size: $size-400;
+  font-family: $font-family;
+  font-weight: 400;
+}
+
+main {
+  overflow: hidden;
+}
+
+.caption, h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5 {
+  line-height: 1.2;
+  color: $green;
+}
+
+.caption {
+  font-size: $size-800;
+  font-weight: 600;
+}
+
+h1,.h1 {
+  font-size: $size-700;
+  font-weight: 600;
+}
+
+h2,.h2 {
+  font-size: $size-600;
+  font-weight: 500;
+}
+
+h3,.h3 {
+  font-size: $size-500;
+  font-weight: 500;
+}
+
+h4,.h4 {
+  font-size: $size-400;
+  font-weight: 400;
+}
+
+h5,.h5 {
+  font-size: $size-300;
+  font-weight: 400;
+}
+
+a:not([class]) {
+  color: $green;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a.arrow {
+  color: $green;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  gap: 1ch;
+  transition: gap 100ms ease;
+  align-items: center;
+  text-transform: uppercase;
+  &::after {
+    content: url('https://api.iconify.design/fa-solid/long-arrow-alt-right.svg?color=%230cce6b');
+  }
+  &:hover {
+    gap: 2ch;
+  }
+}
+
+ul, ol {
+  padding-left: 1.125rem;
+  font-weight: 600;
+}

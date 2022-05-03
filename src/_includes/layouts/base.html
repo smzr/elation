@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  </head>
+  <body>
+    {% include "partials/banner.html" %}
+    <main tabindex="-1" id="main-content">{{ content | safe }}</main>
+    {% include 'partials/footer.html' %}
+    <script>
+      const swiperBanner = new Swiper('.swiper--banner', {
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+        },
+      });
+      const swiperTestimonials = new Swiper('.swiper--testimonials', {
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      });
+      const swiperAccreds = new Swiper('.swiper--accreds', {
+        loop: true,
+        slidesPerView: "auto",
+        spaceBetween: 78,
+        centeredSlides: true,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
+    <script>
+      const menu = document.getElementsByClassName('navbar-menu')[0];
+      function openMenu() {
+        menu.classList.add('is-active')
+        document.body.style.overflowY = 'hidden';
+      };
+      function closeMenu() {
+        menu.classList.remove('is-active')
+        document.body.style.overflowY = 'scroll';
+      };
+    </script>
+  </body>
+</html>

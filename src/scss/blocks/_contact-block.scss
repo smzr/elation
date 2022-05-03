@@ -1,0 +1,26 @@
+.contact-block {
+  margin-top: -5vh;
+  background-color: $yellow;
+  background-image: url("/images/bg-smile-white.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  clip-path: polygon(0 5vh, 100% 0, 100% 100%, 0 100%);
+  padding: 5rem 0;
+  .content {
+    background-color: $yellow;
+    padding: 4rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    clip-path: polygon(2% 0, 98% 0, 100% 96%, 0 100%);
+    max-width: 54ch;
+    gap: 2rem;
+    h2, p {
+      color: $purple;
+    }
+  }
+}

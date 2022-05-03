@@ -1,0 +1,48 @@
+.pattern-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: white;
+  background-image: url("/images/bg-smile-purple.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5rem 0;
+  .heading, .paragraph {
+    padding: 4rem;
+    background-color: white;
+  }
+  .heading {
+    clip-path: polygon(2% 0, 98% 0, 100% 96%, 0 100%);
+    max-width: 60ch;
+  }
+  .paragraph {
+    clip-path: polygon(0 4%, 95% 0, 100% 97%, 5% 100%);
+    max-width: 42ch;
+  }
+  .wrapper {
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem 0;
+    justify-content: center;
+    align-items: center;
+    @include desktop {
+      align-items: flex-start;
+      flex-direction: row;
+      justify-content: space-between;
+      .heading {
+        transform: translateX(-4rem);
+      }
+      .paragraph {
+        align-self: flex-end;
+        transform: translateX(4rem);
+        p {
+          margin-bottom: 2.5rem;
+        }
+      }
+    }
+  }
+}

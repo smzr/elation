@@ -1,0 +1,58 @@
+.banner {
+  background-color: $green;
+  --swiper-theme-color: white;
+  display: flex;
+  min-height: 100vh;
+  padding: 3.5rem 0;
+  position: relative;
+  .swiper-pagination {
+    width: auto !important;
+    left: #{"clamp(1.5rem, -11.8739rem + 27.8261vw, 11.5rem)"} !important;
+  }
+  .swiper-button-next {
+    right: #{"clamp(1.5rem, -11.8739rem + 27.8261vw, 11.5rem)"};
+    bottom: 10px;
+    top: initial;
+    height: auto;
+    &::after {
+      content: "";
+    }
+  }
+  &-body {
+    padding: 0 #{"clamp(1.5rem, -11.8739rem + 27.8261vw, 11.5rem)"};
+    align-items: center;
+    display: grid;
+    gap: 1rem;
+    flex-grow: 1;
+    flex-shrink: 0;
+    overflow: hidden;
+    text-align: center;
+    @include tablet {
+      grid-template-columns: 7fr 5fr;
+      text-align: left;
+    }
+    .caption {
+      color: $purple;
+      margin-bottom: 2.75rem;
+    }
+    .banner-image {
+      position: relative;
+      height: 100%;
+      @include tablet {
+        margin-right: -16rem;
+        overflow-x: visible;
+      }
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.banner + * {
+  margin-top: -5vh;
+  clip-path: polygon(0 0,100% 5vh,100% 100%,0 100%);
+}

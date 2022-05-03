@@ -1,0 +1,20 @@
+.product-block {
+  background-color: $purple;
+  clip-path: polygon(0 5vh, 100% 0, 100% 100%, 0 100%);
+  margin-top: -5vh;
+  padding: 12rem 0;
+  .intro {
+    text-align: center;
+    .caption {
+      color: white;
+      max-width: 18ch;
+      margin: auto;
+    }
+    p {
+      @extend h2;
+      color: white;
+      max-width: 36ch;
+      margin: 1.8rem auto 0;
+    }
+  }
+}

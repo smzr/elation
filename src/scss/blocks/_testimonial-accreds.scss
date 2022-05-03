@@ -1,0 +1,95 @@
+.testimonial-accreds {
+  margin-top: -5vh;
+  background-color: $light;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  clip-path: polygon(0 5vh, 100% 0, 100% 100%, 0 100%);
+  padding: 6rem 1rem;
+}
+
+.testimonials-wrapper {
+  display: flex;
+  flex-direction: column;
+  > img {
+    align-self: center;
+    width: 50%;
+  }
+  @include desktop {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.testimonials {
+  align-self: center;
+  display: grid;
+  grid-template-columns: 6rem auto;
+  @include desktop {
+    width: 50%;
+    transform: translateX(-6rem);
+  }
+  > span {
+    font-size: 204px;
+    font-weight: 600;
+    color: $yellow;
+    font-style: italic;
+    transform: translateX(-40%);
+    line-height: 1.2;
+  }
+  .swiper {
+    --swiper-theme-color: #{$green};
+    width: 100%;
+    position: relative;
+    .swiper-pagination {
+      width: auto !important;
+    }
+  }
+  .testimonial-body {
+    .quote {
+      margin-bottom: 3rem;
+      color: $purple;
+    }
+    .author {
+      margin-bottom: 2rem;
+      color: $purple;
+    }
+    .company {
+      margin-bottom: 4rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.accreds-wrapper {
+  --swiper-theme-color: #{$green};
+  background-color: white;
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+  padding: 5rem 0;
+  position: relative;
+  h3 {
+    text-align: center;
+  }
+  .swiper-button-next,.swiper-button-prev {
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    height: auto;
+    width: 5rem;
+    &::after {
+      content: "";
+    }
+  }
+  .swiper-button-prev {
+    left: 0;
+  }
+  .swiper-button-next {
+    right: 0;
+  }
+  .swiper-pagination {
+    position: initial;
+  }
+  .accred--logo.swiper-slide {
+    width: 220px;
+  }
+}

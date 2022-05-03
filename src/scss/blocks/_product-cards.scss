@@ -1,0 +1,24 @@
+.product-cards {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  margin-top: 8rem;
+  .card {
+    background-color: white;
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    clip-path: polygon(0 0, 99% 2%, 100% 98%, 1% 100%);
+    strong {
+      font-weight: 600;
+    }
+    > img {
+      height: 3rem;
+    }
+  }
+}

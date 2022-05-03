@@ -1,0 +1,17 @@
+.latest-news-block {
+  background-color: white;
+  display: flex;
+  min-height: 100vh;
+  margin-top: -5vh;
+  clip-path: polygon(0 0, 100% 5vh, 100% 100%, 0 100%);
+  padding: 6rem 0;
+  .heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      color: $purple;
+    }
+  }
+}

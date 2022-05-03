@@ -1,0 +1,49 @@
+{% set testimonialSlide %}
+  <div class="testimonial-body swiper-slide">
+    <div>
+      <p class="quote h2">You have taken the time to understand us, our values and culture and have delivered far more than we could have hoped for.</p>
+      <p class="author h3">Ben Olson, Managing Director<br> Grosvenor Consultancy</p>
+      <p class="company h3">Growth Academy</p>
+    </div>
+  </div>
+{% endset %}
+<section class="testimonial-accreds">
+  <div class="wrapper testimonials-wrapper">
+    <div class="testimonials">
+      <span aria-hidden="true">"</span>
+      <div class="swiper swiper--testimonials">
+        <div class="swiper-wrapper">
+          {{ testimonialSlide | safe }}
+          {{ testimonialSlide | safe }}
+          {{ testimonialSlide | safe }}
+        </div>
+    
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <img src="/images/testimonial-puzzle.png" alt="">
+  </div>
+  <div class="wrapper accreds-wrapper">
+    <h3>People we work with</h3>
+    <div class="swiper swiper--accreds">
+      <div class="swiper-wrapper">
+        <div class="accred--logo swiper-slide">
+          <img src="/images/accreds-1.png" alt="">
+        </div>
+        <div class="accred--logo swiper-slide">
+          <img src="/images/accreds-2.png" alt="">
+        </div>
+        <div class="accred--logo swiper-slide">
+          <img src="/images/accreds-3.png" alt="">
+        </div>
+        <div class="accred--logo swiper-slide">
+          <img src="/images/accreds-4.png" alt="">
+        </div>
+      </div>
+  
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"><span class="iconify" data-icon="fa-solid:arrow-left"></span></div>
+      <div class="swiper-button-next"><span class="iconify" data-icon="fa-solid:arrow-right"></span></div>
+    </div>
+  </div>
+</section>
