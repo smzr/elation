@@ -20,6 +20,9 @@
   .paragraph {
     clip-path: polygon(0 4%, 95% 0, 100% 97%, 5% 100%);
     max-width: 42ch;
+    p {
+      margin-bottom: 1rem;
+    }
   }
   .wrapper {
     flex-grow: 1;

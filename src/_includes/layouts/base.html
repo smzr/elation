@@ -14,46 +14,6 @@
     {% include "partials/banner.html" %}
     <main tabindex="-1" id="main-content">{{ content | safe }}</main>
     {% include 'partials/footer.html' %}
-    <script>
-      const swiperBanner = new Swiper('.swiper--banner', {
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-        },
-      });
-      const swiperTestimonials = new Swiper('.swiper--testimonials', {
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-        },
-      });
-      const swiperAccreds = new Swiper('.swiper--accreds', {
-        loop: true,
-        slidesPerView: "auto",
-        spaceBetween: 78,
-        centeredSlides: true,
-        pagination: {
-          el: '.swiper-pagination',
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    </script>
-    <script>
-      const menu = document.getElementsByClassName('navbar-menu')[0];
-      function openMenu() {
-        menu.classList.add('is-active')
-        document.body.style.overflowY = 'hidden';
-      };
-      function closeMenu() {
-        menu.classList.remove('is-active')
-        document.body.style.overflowY = 'scroll';
-      };
-    </script>
+    {% include 'partials/scripts.html' %}
   </body>
 </html>
